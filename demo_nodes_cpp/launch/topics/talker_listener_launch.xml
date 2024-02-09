@@ -1,4 +1,8 @@
 <launch>
-  <node pkg="demo_nodes_cpp" exec="talker" output="screen" />
-  <node pkg="demo_nodes_cpp" exec="listener" output="screen" />
+   <node pkg="demo_nodes_cpp" exec="talker" output="screen" >
+      <remap from="chatter" to="my_topic"/>
+   </node>
+   <node pkg="demo_nodes_cpp" exec="listener" output="screen" >
+      <remap from="chatter" to="my_topic"/>
+   </node>
 </launch>

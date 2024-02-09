@@ -3,7 +3,15 @@ launch:
       pkg: "demo_nodes_cpp"
       exec: "talker"
       output: "screen"
+      remap:
+      -
+        from: "chatter"
+        to: "my_topic"
   - node:
       pkg: "demo_nodes_cpp"
       exec: "listener"
       output: "screen"
+      remap:
+      -
+        from: "chatter"
+        to: "my_topic"
